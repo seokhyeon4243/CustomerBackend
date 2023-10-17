@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- <mapper namespace="userNS"> -->
+<mapper namespace="myspring.customuser.dao.mapper.CustomUserMapper">
+	<select id="selectCustomUserById" parameterType="int" resultType="CustomUser">
+		select * from customer where id=#{value}
+	</select>
+	<select id="selectCustomUserList" resultType="CustomUser">
+		select * from customer order by id
+	</select>
+
+</mapper>
